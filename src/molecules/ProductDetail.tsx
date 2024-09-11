@@ -2,11 +2,27 @@ import { useParams } from 'react-router-dom'
 import { useGetProductByIDQuery } from '../services/products';
 import Image from '../atoms/Image';
 import Text from '../atoms/Text';
+import Button from '../atoms/Button';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../features/cart/cartSlice';
 
 export default function ProductDetail() {
     const { productId } = useParams();
-
+    const dispatch = useDispatch();
     const { data, isLoading, error } = useGetProductByIDQuery(productId!);
+
+    function handleAddToCart() {
+        const cartItem = {
+            id: data!.id,
+            title: data!.title,
+            image: data!.image,
+            quantity: 1,
+            price: data!.price,
+            totalPrice: data!.price,
+        };
+
+        dispatch(addItem(cartItem))
+    }
 
     if (isLoading) return "Loading";
 
@@ -36,6 +52,11 @@ export default function ProductDetail() {
                     <Text type='p'>
                         {data?.description}
                     </Text>
+                    <Button onClick={handleAddToCart}>
+                        <Text type='h6'>
+                            Add to Card
+                        </Text>
+                    </Button>
                 </div>
             </div>
         </div>
