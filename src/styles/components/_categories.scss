@@ -1,0 +1,29 @@
+.categories{
+
+    padding:toRem(90) toRem(42);
+    &__title{
+        text-align: center;
+    }
+
+    &__items{
+        margin-top:25px;
+        display: flex;
+        justify-content: center;
+        gap:8px;
+    }
+
+}
+
+.category-card{
+
+    &:hover{
+        cursor: pointer;
+    }
+    img{
+        object-fit: cover;
+    }
+
+    &__title{
+        text-align: center;
+    }
+}

@@ -1,0 +1,29 @@
+.advertisements {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+
+}
+
+.advertisement-card {
+    position: relative;
+    width: 430.67px;
+    height: 534px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        position: absolute;
+        z-index: 9;
+    }
+
+    &__title {
+        z-index: 99;
+    }
+
+    &__btn {
+        z-index: 99;
+    }
+}
