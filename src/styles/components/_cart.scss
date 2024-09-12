@@ -10,10 +10,12 @@
     overflow: scroll;
 
     .btn {
+        width: 50px;
+        height: 50px;
         background-color: transparent;
 
         &:hover {
-            color: red;
+            color: red
         }
     }
 
@@ -38,18 +40,30 @@
     padding: 10px;
 
     &__detail {
-        width: toRem(300);
+        width: toRem(250);
         display: flex;
+        gap: toRem(30);
         flex-direction: column;
-    }
+        gap: toRem(10);
 
-    .btn {
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-
-        &:hover {
-            color: red
+        &__price {
+            font-weight: bold;
         }
     }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(10);
+        align-items: center;
+
+        &__quantity {
+            display: flex;
+            background-color: white;
+            border: 1px solid $small-text-color;
+            align-items: center;
+        }
+    }
+
+
 }

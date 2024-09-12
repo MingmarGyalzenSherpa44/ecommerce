@@ -9,7 +9,7 @@ export default function CartItem({ id, quantity, title, price, image, totalPrice
     // const dispatch = useDispatch();
     return (
         <div key={id} className='cart-item'>
-            <Image src={image} width='50px' height='60px' alt='' />
+            <Image src={image} width='70px' height='100px' alt='' />
             <div className="cart-item__detail">
                 <div className="cart-item__detail__title">
                     <Text type='h6'>
@@ -18,16 +18,32 @@ export default function CartItem({ id, quantity, title, price, image, totalPrice
                 </div>
                 <div className="cart-item__detail__price">
                     <Text type='p'>
-                        {quantity} x {price} = {totalPrice}
+                        {price}
                     </Text>
 
                 </div>
             </div>
-            <Button width='50px' height='50px' paddingX='10px' paddingY='10px'>
-                <Text type='h5'>
-                    X
-                </Text>
-            </Button>
+            <div className="cart-item__options">
+                <Button width='50px' height='50px' paddingX='10px' paddingY='10px'>
+                    <Text type='h5'>
+                        X
+                    </Text>
+                </Button>
+                <div className="cart-item__options__quantity">
+                    <Button>
+                        <Text type='p'>
+                            -
+                        </Text>
+                    </Button>
+                    {quantity}
+                    <Button>
+                        <Text type='p'>
+                            +
+                        </Text>
+                    </Button>
+                </div>
+            </div>
+
         </div>
     )
 }

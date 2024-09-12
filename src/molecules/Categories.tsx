@@ -21,7 +21,7 @@ export default function Categories() {
             </div>
             <div className="categories__items">
                 {
-                    data?.map((title) => <CategoryCard key={title} title={title} url={categoryImages[title]} />)
+                    data?.map((title) => <CategoryCard key={title} title={title} url={categoryImages[title as keyof typeof categoryImages]} />)
                 }
             </div>
         </div>
