@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from '../atoms/Image'
 
 export default function Mission() {
