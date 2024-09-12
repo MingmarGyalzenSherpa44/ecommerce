@@ -7,11 +7,19 @@ import searchLogo from "../../public/icons/MagnifyingGlass.svg"
 import cartLogo from "../../public/icons/ShoppingCartSimple.svg"
 import userLogo from "../../public/icons/User.svg"
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../app/store'
+import Cart from './Cart'
 
 export default function NavBar() {
 
     const [activeLink, setActiveLink] = useState('home');
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const { totalQuantity } = useSelector((state: RootState) => state.cart)
 
+    function handleCartIconClick() {
+        setIsCartOpen((prev) => !prev)
+    }
     function handleClick(linkName: string) {
         setActiveLink(linkName);
     }
@@ -70,13 +78,18 @@ export default function NavBar() {
                         </Link>
                     </li>
 
-                    <li>
-                        <Link url=''>
-                            <Image alt='' src={cartLogo} width='16px' height='16px' />
-                        </Link>
+                    <li onClick={handleCartIconClick}>
+                        <Image alt='' src={cartLogo} width='16px' height='16px' />
+                        <div className="cart-quantity">
+                            <Text type='p'>
+                                {totalQuantity}
+                            </Text>
+                        </div>
+
                     </li>
                 </ul>
             </nav>
+            {isCartOpen && <Cart handleClick={() => setIsCartOpen(false)} />}
         </header >
     )
 }
