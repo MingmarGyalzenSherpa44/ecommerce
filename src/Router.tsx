@@ -2,11 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./Layout";
 import About from "./pages/About";
-import Men from "./pages/Men";
-import Women from "./pages/Women";
 import EverworldStories from "./pages/EverworldStories";
 import Product from "./molecules/Product";
 import ProductDetail from "./molecules/ProductDetail";
+import Stores from "./pages/Stores";
 
 
 export const router = createBrowserRouter([
@@ -35,7 +34,13 @@ export const router = createBrowserRouter([
         {
             path: "/products/:productId",
             element: <ProductDetail />
-        }
+        },
+        {
+            path: "/stores",
+            element: (
+                <Stores />
+            ),
+        },
         ]
     }
 ])

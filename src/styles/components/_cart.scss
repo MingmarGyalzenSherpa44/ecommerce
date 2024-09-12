@@ -5,9 +5,11 @@
     height: 100%;
     width: toRem(500);
     background-color: $primary-bg-color;
-    padding: toRem(20) toRem(30);
     z-index: 999;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .btn {
         width: 50px;
@@ -20,14 +22,15 @@
     }
 
     &__title {
+        margin: toRem(20) toRem(30);
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid $primary-text-color;
     }
 
     &__items {
-        margin-top: toRem(20);
         display: flex;
+        margin: toRem(20) toRem(30);
         flex-direction: column;
         gap: toRem(20);
     }
