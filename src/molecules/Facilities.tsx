@@ -10,7 +10,7 @@ export default function Facilities() {
         <div className='facilities'>
             <Image alt='' width='411px' height='157px' src={Facility1Img} />
             <Image alt='' width='411px' height='157px' src={Facility2Img} />
-            <Image alt='' width='411px' height='140px' src={Facility3Img} />
+            <Image alt='' width='411px' height='157px' src={Facility3Img} />
 
         </div>
     )

@@ -1,4 +1,3 @@
-import React from 'react'
 
 import TestimonialImg from '/images/testimonialImg.png'
 import Image from '../atoms/Image'
