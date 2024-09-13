@@ -11,12 +11,14 @@ interface IEverLaneFavoriteCard {
 export default function EverLaneFavoriteCard({ title, src, price, subTitle }: IEverLaneFavoriteCard) {
     return (
         <div className='everlane-favorite-card'>
-            <Image src={src} width='282px' height='420px' alt='' />
+            <Image src={src} width='253px' height='380px' alt='' />
             <div className="everlane-favorite-card__details">
                 <div className="everlane-favorite-card__details__about">
                     <Text type='p'>
                         {title}
                     </Text>
+
+
                     <Text type='p'>
                         {subTitle}
                     </Text>

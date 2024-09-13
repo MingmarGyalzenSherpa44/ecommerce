@@ -4,6 +4,10 @@ import Categories from "../molecules/Categories";
 import Advertisement from "../molecules/Advertisement";
 import Mission from "../molecules/Mission";
 import EverlaneFavorites from "../molecules/EverlaneFavorites";
+import Testimonial from "../molecules/Testimonial";
+import Picks from "../molecules/Picks";
+import EverlaneOnYou from "../molecules/EverlaneOnYou";
+import Facilities from "../molecules/Facilities";
 
 export default function Home() {
   return (
@@ -14,6 +18,10 @@ export default function Home() {
       <Advertisement />
       <Mission />
       <EverlaneFavorites />
+      <Testimonial />
+      <Picks />
+      <EverlaneOnYou />
+      <Facilities />
     </>
   )
 }

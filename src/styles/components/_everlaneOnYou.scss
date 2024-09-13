@@ -1,0 +1,18 @@
+.everlane-on-you {
+    text-align: center;
+    padding-top: toRem(90);
+
+    &__title {
+        margin-bottom: toRem(25);
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    &__list {
+        display: flex;
+        gap: toRem(18);
+        justify-content: center;
+    }
+}

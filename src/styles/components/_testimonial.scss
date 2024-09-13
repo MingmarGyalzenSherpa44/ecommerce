@@ -1,0 +1,32 @@
+.testimonial {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: toRem(80);
+    border-bottom: 1px solid $primary-text-color;
+
+    &__detail {
+        width: toRem(630);
+        padding: toRem(0) toRem(120);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            margin-bottom: toRem(40);
+        }
+
+        &__rating {
+            margin-bottom: toRem(14);
+        }
+
+        &__quote {
+            margin-bottom: toRem(40);
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+    }
+}

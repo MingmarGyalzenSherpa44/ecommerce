@@ -22,5 +22,11 @@ export const everLaneFavorites = [
         subTitle: "Vintage Black",
         price: 30,
         src: "./images/essentialOrganic.png"
+    },
+    {
+        title: "The Waffle Long-Sleeve Crew",
+        subTitle: "Bone",
+        price: 60,
+        src: './images/waffleLongSleeve.png'
     }
 ]
