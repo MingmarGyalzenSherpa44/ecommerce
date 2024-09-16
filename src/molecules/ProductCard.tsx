@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Image from "../atoms/Image";
 import Text from "../atoms/Text";
 import { IProduct } from "../interfaces/IProduct";
+
 const ProductCard = (props: IProduct) => {
     const { id, title, price, image } = props;
     return (
@@ -15,7 +16,7 @@ const ProductCard = (props: IProduct) => {
                         <Text type="p" color="black">
                             {title}
                         </Text>
-                        <div className="price">
+                        <div className="price"> 
                             <Text type="p" color="#737373">
                                 <span id="linethrough">${price.toFixed(2)}</span>
                             </Text>

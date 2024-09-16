@@ -42,14 +42,14 @@ export default function NavBar() {
                             </Text>
                         </Link>
                     </li>
-                    <li className={`nav__item ${activeLink === "Jewelery" ? "nav__item--active" : ""}`} onClick={() => handleClick("jewelery")}>
+                    <li className={`nav__item ${activeLink === "jewelery" ? "nav__item--active" : ""}`} onClick={() => handleClick("jewelery")}>
                         <Link url='/jewelery'>
                             <Text type='p'>
                                 Jewelery
                             </Text>
                         </Link>
                     </li>
-                    <li className={`nav__item ${activeLink === "Electronics" ? "nav__item--active" : ""}`} onClick={() => handleClick("electronics")}>
+                    <li className={`nav__item ${activeLink === "electronics" ? "nav__item--active" : ""}`} onClick={() => handleClick("electronics")}>
                         <Link url='/electronics'>
                             <Text type='p'>
                                 Electronics

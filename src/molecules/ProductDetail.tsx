@@ -28,7 +28,7 @@ export default function ProductDetail() {
 
     if (error) return "Error"
     return (
-        <div className="product-detail">
+        <div className="product-detail">    
             <div className="product-detail__image">
                 <Image alt='' src={data!.image} width='412px' height='' />
             </div>
